@@ -25,9 +25,9 @@ type MixinConfig struct {
 // install required components into
 const dockerfileLines = `RUN apt-get update && \
 apt-get install python3-pip --yes && \
-pip3 install databricks-cli && \
-ENV LC_ALL=C.UTF-8 && \
-ENV LANG=C.UTF-8
+pip3 install databricks-cli;
+ENV LC_ALL="C.UTF-8"
+ENV LANG="C.UTF-8"
 `
 
 // Build will generate the necessary Dockerfile lines
